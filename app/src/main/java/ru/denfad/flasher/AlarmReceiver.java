@@ -66,7 +66,7 @@ public class AlarmReceiver extends BroadcastReceiver {
         String sFrieId = settings.getString("friend", null);
         try {
             try {
-                Credentials credentials = new Credentials("denfad2003", "AQAAAAArZCXAAADLWwB7Pep9mEcuhrs_TcTcdUs");
+                Credentials credentials = new Credentials("{your username}", "{your token}");
                 RestClient client = new RestClient(credentials);
                 Log.e("API", "Create");
                 try {
