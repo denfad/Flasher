@@ -16,8 +16,8 @@ import android.os.Build;
 import android.os.Environment;
 import android.os.IBinder;
 import android.preference.PreferenceManager;
-import android.support.annotation.Nullable;
-import android.support.v4.app.NotificationCompat;
+import androidx.annotation.Nullable;
+import androidx.core.app.NotificationCompat;
 import android.util.Log;
 
 import com.yandex.disk.rest.Credentials;
@@ -128,7 +128,7 @@ public class ImageService extends Service {
         String sFrieId = settings.getString("friend", null);
         try {
             try {
-                Credentials credentials = new Credentials("denfad2003", "AQAAAAArZCXAAADLWwB7Pep9mEcuhrs_TcTcdUs");
+                Credentials credentials = new Credentials(getString(R.string.username), getString(R.string.api_key));
                 RestClient client = new RestClient(credentials);
                 try {
                     date = client.getResources(new ResourcesArgs.Builder().setPath(sFrieId+".jpg").build()).getModified();
