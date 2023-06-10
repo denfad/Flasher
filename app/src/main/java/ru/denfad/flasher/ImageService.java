@@ -126,6 +126,7 @@ public class ImageService extends Service {
 
         SharedPreferences settings = PreferenceManager.getDefaultSharedPreferences(getApplicationContext());
         String sFrieId = settings.getString("friend", null);
+        Log.d("FRIEND NAME", sFrieId);
         try {
             try {
                 Credentials credentials = new Credentials(getString(R.string.username), getString(R.string.api_key));
